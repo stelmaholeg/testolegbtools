@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5.0" method="upgrade">
+
+	<name>COM_BRANCHNETWORK</name>
+	<!-- Следующие элементы необязательны -->
+	<creationDate>Июнь 2013</creationDate>
+	<author>Олег Стельмах</author>
+	<authorEmail>stelmah.oleg@ya.ru</authorEmail>
+	<authorUrl>wildmax.org</authorUrl>
+	<copyright>Информация о копирайте</copyright>
+	<license>Информация о лицензии</license>
+	<!--  Версия записывается в таблицу компонентов -->
+	<version>1.0</version>
+	<!-- Описание необязательно -->
+	<description>COM_BRANCHNETWORK_DESCRIPTION</description>
+
+	<!-- Запускается при установке -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+	<!-- Запускается при удалении -->
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<!-- Запускается при обновлении -->
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+
+	<!-- Раздел основных файлов сайта -->
+	<!-- Обратите внимание на значение аттрибута folder: Этот аттрибут описывает папку нашего пакета-установщика из которой должны копироваться файлы. 
+	Поэтому указанные в этом разделе файлы будут скопированы из папки /site/ нашего пакета-установщика в соответствующую папку установки. -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>controller.php</filename>
+		<filename>branchnetwork.php</filename>
+		<folder>language</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+	</files>
+
+	<media destination="com_branchnetwork" folder="media">
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</media>
+
+	<!-- Администрирование -->
+	<administration>
+		<!-- Раздел Меню -->
+		<menu img="../media/com_branchnetwork/images/branchnetwork-16x16.png">COM_BRANCHNETWORK_MENU</menu>
+		<!-- Раздел основных файлов администрирования  -->
+		<!-- Обратите внимание на значение аттрибута folder: Этот аттрибут описывает папку нашего пакета-установщика из которой должны копироваться файлы. 
+		Поэтому указанные в этом разделе файлы будут скопированы из папки /admin/ нашего пакета-установщика в соответствующую папку установки. -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>controller.php</filename>
+			<filename>branchnetwork.php</filename>
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_branchnetwork.ini</language>
+			<language tag="ru-RU">language/ru-RU/ru-RU.com_branchnetwork.sys.ini</language>
+		</languages>
+	</administration>
+
+</extension>

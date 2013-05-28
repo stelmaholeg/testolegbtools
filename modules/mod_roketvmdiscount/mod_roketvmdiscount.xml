@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/module-install.dtd">
+<install type="module" version="1.5.0">
+	<name>Roket VirtueMart discount</name>
+	<creationDate>August 2011</creationDate>
+	<author>Roket007</author>
+	<authorEmail>roket007|at|yandex.ru</authorEmail>
+	<authorUrl>http://www.roket.kiev.ua</authorUrl>
+	<copyright>
+		Roket007
+	</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0</version>
+	<description>Модуль предназначен исключительно для показа товаров со скидой</description>
+	<files>
+		<filename module="mod_roketvmdiscount">mod_roketvmdiscount.php</filename>
+		<filename module="mod_tp_cb_recentactivities">index.html</filename>
+	</files>
+	<params>
+		<param name="max_items" type="text" default="2"
+			label="Количество отображаемых продуктов"
+			description="Число продуктов которые будут показыватся" />
+		<param name="show_price" type="list" default="1"
+			label="Показывать цену"
+			description="Показывать ли цену товара">
+			<option value="1">Да</option>
+			<option value="0">Нет</option>
+		</param>
+		<param name="type_show" type="list" default="rand"
+			label="Способ показа"
+			description="Показывать в рандумном порядке или в алфавитном порядке по названию.">
+			<option value="rand">Рандумно</option>
+			<option value="end">Названию</option>
+		</param>
+		<param name="show_addtocart" type="list" default="1"
+			label="Показывать кнопку (Купить)"
+			description="Можно включить или выключить показ кнопки купить">
+			<option value="1">Да</option>
+			<option value="0">Нет</option>
+		</param>
+		<param name="display_style" type="list" default="vertical"
+			label="Выд показа"
+			description="Здесь можна выбрпть в каком виде отображать модуль">
+			<option value="horizontal">Горизонтально (1 строка)</option>
+			<option value="vertical">Вертикально (1 столбец)</option>
+			<option value="table">Таблицей (X строк и Y колонок)</option>
+		</param>
+		<param name="products_per_row" type="text" default="4"
+			label="Продуктов в строке"
+			description="Раотает только когда в предыдущем параметре выбрано (Таблица)" />
+		<param name="category_id" type="text" default=""
+			label="ID категории"
+			description="Здесь можно указать ID категории только с которой будут братся товары!" />
+		<param name="moduleclass_sfx" type="text" default=""
+			label="Класс модуля суффикс"
+			description="Класс" />
+		<param name="class_sfx" type="text" default=""
+			label="Меню класс суффикс"
+			description="Класс" />
+	</params>
+</install>
