@@ -48,15 +48,15 @@ class FilialController extends JControllerLegacy
 			return false;
 		}
                 
-                if ($view == 'mainfilial' && $layout == 'dafault' && !$this->checkEditId('com_filial.edit.helloworld', $id)) {
-			// Somehow the person just went to the form - we don't allow that.
-			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
-			$this->setMessage($this->getError(), 'error');
-			$this->setRedirect(JRoute::_('index.php?option=com_filial&view=helloworld', false));
-
-			return false;
-		}
-                
+//                if ($view == 'mainfilial' && $layout == 'default' && !$this->checkEditId('com_filial.edit.mainfilial', $id)) {
+//			// Somehow the person just went to the form - we don't allow that.
+//			$this->setError(JText::sprintf('JLIB_APPLICATION_ERROR_UNHELD_ID', $id));
+//			$this->setMessage($this->getError(), 'error');
+//			$this->setRedirect(JRoute::_('index.php?option=com_filial&view=mainfilial', false));
+//
+//			return false;
+//		}
+//                
                 
                 
 		parent::display();

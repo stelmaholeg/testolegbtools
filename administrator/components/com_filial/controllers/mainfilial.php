@@ -6,8 +6,8 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.controllerform');
 
 /**
- * HelloWorld контроллер.
+ * MainFilial контроллер.
  */
-class FilialControllermainFilial extends JControllerForm
+class FilialControllerMainFilial extends JControllerForm
 {
 }

@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.modeladmin');
 
 /**
- * Модель HelloWorld.
+ * Модель MainFilial.
  */
 class FilialModelMainFilial extends JModelAdmin
 {
@@ -35,7 +35,7 @@ class FilialModelMainFilial extends JModelAdmin
 	public function getForm($data = array(), $loadData = true) 
 	{
 		// Получаем форму.
-		$form = $this->loadForm('com_filial.mainfilial', 'mainfilial',
+		$form = $this->loadForm('com_mainfilial.mainfilial', 'filial',
 								array('control' => 'jform', 'load_data' => $loadData));
 		if (empty($form))
 		{

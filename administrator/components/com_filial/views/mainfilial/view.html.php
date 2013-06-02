@@ -8,7 +8,7 @@ jimport('joomla.application.component.view');
 /**
  * HTML представление редактирования сообщения.
  */
-class FilialViewHelloWorld extends JViewLegacy
+class FilialViewMainFilial extends JViewLegacy
 {
 	/**
 	 * Сообщение.
@@ -60,7 +60,7 @@ class FilialViewHelloWorld extends JViewLegacy
 
 		JToolBarHelper::title($isNew ? JText::_('COM_FILIAL_MANAGER_MAINFILIAL_NEW')
 								: JText::_('COM_FILIAL_MANAGER_MAINFILIAL_EDIT'), 'mainfilial');
-		JToolBarHelper::save('helloworld.save');
-		JToolBarHelper::cancel('helloworld.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
+		JToolBarHelper::save('mainfilial.save');
+		JToolBarHelper::cancel('mainfilial.cancel', $isNew ? 'JTOOLBAR_CANCEL' : 'JTOOLBAR_CLOSE');
 	}
 }

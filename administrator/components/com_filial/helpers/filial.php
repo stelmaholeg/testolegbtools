@@ -44,7 +44,7 @@ class FilialHelper
 		);*/
                 JSubMenuHelper::addEntry(
 			JText::_('COM_FILIAL_SUBMENU_MAINFILIAL'),
-			'index.php?option=com_filial&view=helloworld',
+			'index.php?option=com_filial&view=mainfilials',
 			$vName == 'mainfilial'
 		);            
                 

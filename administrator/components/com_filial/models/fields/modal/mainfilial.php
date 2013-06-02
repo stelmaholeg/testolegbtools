@@ -7,7 +7,7 @@ jimport('joomla.form.helper');
 JFormHelper::loadFieldClass('list');
 
 /**
- * Класс поля формы HelloWorld компонента HelloWorld.
+ * Класс поля формы MainFilial компонента MainFilial.
  */
 class JFormFieldMainFilial extends JFormFieldList
 {
@@ -31,7 +31,7 @@ class JFormFieldMainFilial extends JFormFieldList
 		// Конструируем SQL запрос.
 		$query = $db->getQuery(true);
 		$query->select('id, title')
-				->from('#__filial_mainfilial');
+				->from('#__filial_category');
 		$db->setQuery($query);
 		$messages = $db->loadObjectList();
 

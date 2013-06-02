@@ -6,7 +6,7 @@ defined('_JEXEC') or die;
 jimport('joomla.database.table');
 
 /**
- * Класс таблицы HelloWorld.
+ * Класс таблицы MainFilial.
  */
 class FilialTableFilial extends JTable
 {
