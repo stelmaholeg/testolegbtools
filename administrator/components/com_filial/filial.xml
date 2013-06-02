@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="2.5" method="upgrade">
+	<name>com_filial</name>
+        <author>Stelmakh Oleg</author>
+	<creationDate>Jule 2013</creationDate>	
+	<copyright>(C) 2005 - 2013 Open Source Matters. All rights reserved.	</copyright>
+	<license>GNU General Public License version 2 or later; see	LICENSE.txt</license>
+	<authorEmail>stelmah.taganrog@gmail.com</authorEmail>
+	<authorUrl>wildmax.org</authorUrl>
+	<version>1.0</version>
+	<description>COM_FILIAL_XML_DESCRIPTION</description>
+
+	<files folder="site">
+                <filename>controller.php</filename>
+		<filename>filial.php</filename>		
+		<filename>index.html</filename>
+                <filename>metadata.xml</filename>                
+		<filename>router.php</filename>                
+                <folder>controllers</folder>
+                <folder>helpers</folder>
+		<folder>models</folder>
+                <folder>views</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_filial.ini
+		</language>
+	</languages>
+	<administration>
+		<files folder="admin">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>filial.php</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<folder>controllers</folder>
+			<folder>elements</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB.com_filial.ini
+			</language>
+		</languages>
+	</administration>
+</extension>
+
+
