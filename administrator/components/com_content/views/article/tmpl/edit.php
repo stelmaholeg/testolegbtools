@@ -45,16 +45,44 @@ endif;
 
 ?>
 
+
+
 <script type="text/javascript">
 	Joomla.submitbutton = function(task) {
 		if (task == 'article.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
-			<?php echo $this->form->getField('articletext')->save(); ?>
+			<?php echo $this->form->getField('introtext')->save(); ?>
 			Joomla.submitform(task, document.getElementById('item-form'));
 		} else {
 			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
 		}
 	}
 </script>
+
+<script type="text/javascript">
+	Joomla.submitbutton = function(task) {
+		if (task == 'article.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
+			<?php echo $this->form->getField('fulltext')->save(); ?>
+			Joomla.submitform(task, document.getElementById('item-form'));
+		} else {
+			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
+		}
+	}
+</script>
+
+
+
+<!--script type="text/javascript">
+	Joomla.submitbutton = function(task) {
+		if (task == 'article.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
+			<?php// echo $this->form->getField('articletext')->save(); ?>
+			Joomla.submitform(task, document.getElementById('item-form'));
+		} else {
+			alert('<?php// echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
+		}
+	}
+</script--->
+
+
 
 <form action="<?php echo JRoute::_('index.php?option=com_content&layout=edit&id='.(int) $this->item->id); ?>" method="post" name="adminForm" id="item-form" class="form-validate">
 	<div class="width-60 fltlft">
@@ -96,10 +124,19 @@ endif;
 				<?php echo $this->form->getInput('id'); ?></li>
 			</ul>
 
+                        <div class="clr"></div>
+			<?php echo $this->form->getLabel('introtext'); ?>		
+                        <div class="clr"></div>
+			<?php echo $this->form->getInput('introtext'); ?>
+                        <div class="clr"></div>
+			<?php echo $this->form->getLabel('fulltext'); ?>
 			<div class="clr"></div>
-			<?php echo $this->form->getLabel('articletext'); ?>
-			<div class="clr"></div>
-			<?php echo $this->form->getInput('articletext'); ?>
+			<?php echo $this->form->getInput('fulltext'); ?>
+                        
+			<!--div class="clr"></div-->
+			<?php// echo $this->form->getLabel('articletext'); ?>
+			<!--div class="clr"></div--->
+			<?php// echo $this->form->getInput('articletext'); ?>
 		</fieldset>
 	</div>
 

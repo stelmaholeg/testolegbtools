@@ -14,9 +14,15 @@
 		<field name="alias" type="text" label="JFIELD_ALIAS_LABEL"
 			description="JFIELD_ALIAS_DESC" class="inputbox" size="45" />
 
-		<field name="articletext" type="editor" class="inputbox"
-			label="COM_CONTENT_FIELD_ARTICLETEXT_LABEL" description="COM_CONTENT_FIELD_ARTICLETEXT_DESC"
+                <field name="introtext" type="editor" class="inputbox"
+			label="COM_CONTENT_FIELD_INTROTEXT_LABEL" description="COM_CONTENT_FIELD_INTROTEXT_DESC"
 			filter="JComponentHelper::filterText" buttons="true" />
+                <field name="fulltext" type="editor" class="inputbox"
+			label="COM_CONTENT_FIELD_FULLTEXT_LABEL" description="COM_CONTENT_FIELD_FULLTEXT_DESC"
+			filter="JComponentHelper::filterText" buttons="true" />
+		<!--field name="articletext" type="editor" class="inputbox"
+			label="COM_CONTENT_FIELD_ARTICLETEXT_LABEL" description="COM_CONTENT_FIELD_ARTICLETEXT_DESC"
+			filter="JComponentHelper::filterText" buttons="true" /-->
 
 		<field name="state" type="list" label="JSTATUS"
 			description="JFIELD_PUBLISHED_DESC" class="inputbox"

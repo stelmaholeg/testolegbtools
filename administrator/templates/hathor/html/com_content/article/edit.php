@@ -49,7 +49,11 @@ endif;
 <script type="text/javascript">
 	Joomla.submitbutton = function(task) {
 		if (task == 'article.cancel' || document.formvalidator.isValid(document.id('item-form'))) {
-			<?php echo $this->form->getField('articletext')->save(); ?>
+                        //add oleg
+                        <?php echo $this->form->getField('introtext')->save(); ?>
+                        <?php echo $this->form->getField('fulltext')->save(); ?>
+                        //end add oleg    
+			<?php //echo $this->form->getField('articletext')->save(); ?>
 			Joomla.submitform(task, document.getElementById('item-form'));
 		} else {
 			alert('<?php echo $this->escape(JText::_('JGLOBAL_VALIDATION_FORM_FAILED'));?>');
@@ -98,11 +102,30 @@ endif;
 
 			</ul>
 
+                        
+                        
+                        
+                        
+                                                <!--add oleg-->
+                        <div class="clr"></div>
+			<?php echo $this->form->getLabel('introtext'); ?>
+                        <div class="clr"></div>
+			<?php echo $this->form->getInput('introtext'); ?>
+                      
+                        
+                        <div class="clr"></div>
+			<?php echo $this->form->getLabel('fulltext'); ?>
 			<div class="clr"></div>
-			<?php echo $this->form->getLabel('articletext'); ?>
-			<div class="clr"></div>
-			<?php echo $this->form->getInput('articletext'); ?>
-			<div class="clr"></div>
+			<?php echo $this->form->getInput('fulltext'); ?>
+                        
+                        <!--the initial code-->
+			<!--div class="clr"></div-->
+			<?php //echo $this->form->getLabel('articletext'); ?>
+			<!--div class="clr"></div-->
+			<?php //echo $this->form->getInput('articletext'); ?>
+                        <!--end the initial code-->
+                        
+                          <!--end add oleg-->   
 		</fieldset>
 	</div>
 
