@@ -1,6 +1,6 @@
 <?php
-//bla-bla
-//jgvjhghh
+//version Thuesday 21:58
+
 /**
  * @package		Joomla.Site
  * @copyright	Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
