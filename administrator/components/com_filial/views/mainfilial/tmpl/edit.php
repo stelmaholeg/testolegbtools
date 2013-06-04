@@ -4,6 +4,7 @@ defined('_JEXEC') or die;
  
 // Загружаем тултипы.
 JHtml::_('behavior.tooltip');
+
 ?>
 <form action="<?php echo JRoute::_('index.php?option=com_filial&layout=edit&id='.(int)$this->item->id); ?>" method="post" name="adminForm" id="mainfilial-form">
 	<fieldset class="adminform">

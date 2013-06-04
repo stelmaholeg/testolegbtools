@@ -32,6 +32,7 @@ class FilialViewMainFilial extends JViewLegacy
 	public function display($tpl = null) 
 	{
 		// Получаем данные из модели.
+            
 		$this->form = $this->get('Form');
 		$this->item = $this->get('Item');
 

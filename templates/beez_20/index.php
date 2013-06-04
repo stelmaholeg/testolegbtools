@@ -109,19 +109,7 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/hide.j
 <div id="all">
         <div id="back">
                 <div id="header">
-                                <div class="logoheader">
-                                        <h1 id="logo">
 
-                                        <?php if ($logo): ?>
-                                        <img src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($templateparams->get('sitetitle'));?>" />
-                                        <?php endif;?>
-                                        <?php if (!$logo ): ?>
-                                        <?php echo htmlspecialchars($templateparams->get('sitetitle'));?>
-                                        <?php endif; ?>
-                                        <span class="header1">
-                                        <?php echo htmlspecialchars($templateparams->get('sitedescription'));?>
-                                        </span></h1>
-                                </div><!-- end logoheader -->
                                         <ul class="skiplinks">
                                                 <li><a href="#main" class="u2"><?php echo JText::_('TPL_BEEZ2_SKIP_TO_CONTENT'); ?></a></li>
                                                 <li><a href="#nav" class="u2"><?php echo JText::_('TPL_BEEZ2_JUMP_TO_NAV'); ?></a></li>
@@ -140,6 +128,7 @@ $doc->addScript($this->baseurl.'/templates/'.$this->template.'/javascript/hide.j
 
 
                         </div><!-- end header -->
+                         <jdoc:include type="modules" name="position-slider"   />
                         <div id="<?php echo $showRightColumn ? 'contentarea2' : 'contentarea'; ?>">
                                         <div id="breadcrumbs">
 
