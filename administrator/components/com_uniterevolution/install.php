@@ -1,5 +1,8 @@
 <?php 
 /**
+ * 
+ * 
+ * 
  * @package Unite Revolution Slider for Joomla 1.7-2.5
  * @author UniteCMS.net
  * @copyright (C) 2012 Unite CMS, All Rights Reserved. 
